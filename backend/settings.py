@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-hvmo@&q=&en-#6%$8gvx7_8)cm6+ur7fm!w_3*-g==tbul^%bg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'https://murmuring-coast-02165.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'https://murmuring-coast-02165.herokuapp.com', 'murmuring-coast-02165.herokuapp.com']
 
 
 # Application definition
