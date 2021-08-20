@@ -6,14 +6,14 @@ from .models import User
 class ArtSerializer(serializers.ModelSerializer):
     class Meta:
         model = Art
-        fields = ('title', 'author', 'rating', 'image', 'price', 'description', 'created_date',)
+        fields = ('id', 'title', 'author', 'rating', 'image', 'price', 'description', 'created_date',)
 
 class ArtistSerializer(serializers.ModelSerializer):
     class Meta:
         model = Artist
-        fields = ('name', 'bio', 'art',)
+        fields = ('id', 'name', 'bio', 'art',)
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('username', 'password',)
+        fields = ('id', 'username', 'password',)
