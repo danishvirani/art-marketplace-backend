@@ -7,6 +7,7 @@ class ArtSerializer(serializers.ModelSerializer):
     class Meta:
         model = Art
         fields = ('id', 'title', 'author', 'rating', 'image', 'price', 'description', 'created_date',)
+        depth = 1
 
 class ArtistSerializer(serializers.ModelSerializer):
     art = ArtSerializer(many=True)
