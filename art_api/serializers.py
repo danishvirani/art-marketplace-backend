@@ -8,17 +8,17 @@ class ArtSerializer(serializers.ModelSerializer):
     class Meta:
         model = Art
         fields = ('id', 'title', 'author', 'rating', 'image', 'price', 'description', 'created_date',)
+        depth = 1
 
     def to_representation(self, instance):
         self.fields['author'] =  ArtistSerializer(read_only=True)
         return super(ArtSerializer, self).to_representation(instance)
 
 class ArtistSerializer(serializers.ModelSerializer):
-    art = ArtSerializer(many=True)
 
     class Meta:
         model = Artist
-        fields = ('id', 'name', 'bio', 'art',)
+        fields = ('id', 'name', 'bio',)
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
