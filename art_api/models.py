@@ -12,7 +12,7 @@ class Artist(models.Model):
 class Art(models.Model):
     title = models.CharField(max_length=32)
     author = models.ForeignKey(Artist, null=True, on_delete=models.SET_NULL, related_name='art')
-    rating = models.IntegerField(null=True)
+    rating = models.IntegerField(null=True, blank=True)
     image = models.CharField(max_length=200)
     price = models.IntegerField()
     description = models.CharField(max_length=200)
