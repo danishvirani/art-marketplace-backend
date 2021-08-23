@@ -4,10 +4,10 @@ from .models import Artist
 from .models import User
 
 class ArtSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Art
         fields = ('id', 'title', 'author', 'rating', 'image', 'price', 'description', 'created_date',)
-        depth = 1
 
     def to_representation(self, instance):
         self.fields['author'] =  ArtistSerializer(read_only=True)
