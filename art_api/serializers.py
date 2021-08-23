@@ -10,8 +10,10 @@ class ArtSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'author', 'rating', 'image', 'price', 'description', 'created_date',)
 
     def to_representation(self, instance):
-        self.fields['author'] =  ArtistSerializer(read_only=True)
-        return super(ArtSerializer, self).to_representation(instance)
+        data = super().to_representation(instance)
+        data['author'] = ArtistSerializer(
+            Artist.objects.get(pk=data['author'])).data
+        return data
 
 class ArtistSerializer(serializers.ModelSerializer):
 
