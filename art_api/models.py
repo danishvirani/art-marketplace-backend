@@ -4,7 +4,7 @@ from django.db import models
 class User(models.Model):
     username = models.CharField(max_length=75, unique=True)
     password = models.CharField(max_length=1000)
-    cart = ArrayField()
+    cart = models.ArrayField()
 
 class Artist(models.Model):
     name = models.CharField(max_length=32)
