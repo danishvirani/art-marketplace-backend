@@ -19,7 +19,7 @@ class Art(models.Model):
 class User(models.Model):
     username = models.CharField(max_length=75, unique=True)
     password = models.CharField(max_length=1000)
-    cart = ArrayField(IntegerField()
+    cart = ArrayField(models.IntegerField()
                    , size=10)
     # cart = ArrayField(
     #     models.ForeignKey(Art, null=True, on_delete=models.SET_NULL))
