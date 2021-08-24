@@ -9,8 +9,13 @@ class Artist(models.Model):
 
 class Art(models.Model):
     title = models.CharField(max_length=32)
+<<<<<<< HEAD
     author = models.ForeignKey(Artist, null=True, on_delete=models.SET_NULL, related_name='art')
     rating = models.IntegerField(null=True, blank=True)
+=======
+    author = models.CharField(max_length=32)
+    rating = models.IntegerField(null=True)
+>>>>>>> 8a30ee6982017c33f9df2335c3be5c5807c38d20
     image = models.CharField(max_length=200)
     price = models.IntegerField()
     description = models.CharField(max_length=500)
