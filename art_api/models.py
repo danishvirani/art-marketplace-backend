@@ -20,6 +20,6 @@ class User(models.Model):
     username = models.CharField(max_length=75, unique=True)
     password = models.CharField(max_length=1000)
     cart = ArrayField(models.IntegerField()
-                   , size=10)
+                   , size=10, null=True)
     # cart = ArrayField(
     #     models.ForeignKey(Art, null=True, on_delete=models.SET_NULL))
