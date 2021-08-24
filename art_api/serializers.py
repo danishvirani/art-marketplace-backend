@@ -28,7 +28,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('id', 'username', 'password', 'cart',)
 
     def create(self, validated_data):
-        user = UserAccount.objects.create(
+        user = User.objects.create(
         username=validated_data['username'],
         password = make_password(validated_data['password'])
         )
@@ -36,7 +36,7 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
      def update(self,instance, validated_data):
-        user = UserAccount.objects.get(username=validated_data["username"])
+        user = User.objects.get(username=validated_data["username"])
         user.password = make_password(validated_data["password"])
         user.save()
         return user
