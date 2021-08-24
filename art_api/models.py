@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
+# from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 
@@ -19,4 +19,6 @@ class Art(models.Model):
 class User(models.Model):
     username = models.CharField(max_length=75, unique=True)
     password = models.CharField(max_length=1000)
-    cart = ArrayField(models.ForeignKey(Art, null=True, on_delete=models.SET_NULL))    
+    cart = ArrayField(models.CharField(max_length=100, blank=True))
+    # cart = ArrayField(
+    #     models.ForeignKey(Art, null=True, on_delete=models.SET_NULL))
