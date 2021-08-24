@@ -5,7 +5,7 @@ from django.contrib.postgres.fields import ArrayField
 class User(models.Model):
     username = models.CharField(max_length=75, unique=True)
     password = models.CharField(max_length=1000)
-    cart = ArrayField()
+    cart = ArrayField(models.ForeignKey(Art, null=True, on_delete=models.SET_NULL))
 
 class Artist(models.Model):
     name = models.CharField(max_length=32)
