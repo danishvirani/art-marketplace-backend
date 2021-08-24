@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from django.contrib.auth.hashers import make_password, check_password
 from .models import Art
 from .models import Artist
 from .models import User
@@ -24,4 +25,18 @@ class ArtistSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'username', 'password',)
+        fields = ('id', 'username', 'password', 'cart',)
+
+    def create(self, validated_data):
+        user = UserAccount.objects.create(
+        username=validated_data['username'],
+        password = make_password(validated_data['password'])
+        )
+        user.save()
+        return user
+
+     def update(self,instance, validated_data):
+        user = UserAccount.objects.get(username=validated_data["username"])
+        user.password = make_password(validated_data["password"])
+        user.save()
+        return user
