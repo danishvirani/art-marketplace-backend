@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['localhost', 'https://murmuring-coast-02165.herokuapp.com', 'mu
 # Application definition
 
 INSTALLED_APPS = [
+    'bcrypt',
     'corsheaders',
     'rest_framework',
     'art_api',
