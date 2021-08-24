@@ -29,14 +29,14 @@ class UserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         user = User.objects.create(
-        username=validated_data['username'],
+        username = validated_data['username'],
         password = make_password(validated_data['password'])
         )
         user.save()
         return user
 
-     def update(self,instance, validated_data):
-        user = User.objects.get(username=validated_data["username"])
-        user.password = make_password(validated_data["password"])
+    def update(self,instance,validated_data):
+        user = User.objects.get(username=validated_data['username'])
+        user.password = make_password(validated_data['password'])
         user.save()
         return user
