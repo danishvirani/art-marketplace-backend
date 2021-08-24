@@ -7,6 +7,10 @@ from .models import Artist
 
 from .serializers import UserSerializer
 from .models import User
+
+from django.contrib.auth.hashers import make_password, check_password
+from django.http import JsonResponse
+import json
 # Create your views here.
 
 class ArtList(generics.ListCreateAPIView):
