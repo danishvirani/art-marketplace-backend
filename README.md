@@ -2,9 +2,9 @@
 # [Art Marketplace](https://art-marketplace.herokuapp.com/)
 
 ## Authors
-- Tommy Chung |[LinkedIn](https://www.linkedin.com/in/tommy-chung93)%7C  |[GitHub](https://github.com/tommyc93)%7C
-- Danish |[LinkedIn](https://www.linkedin.com/in/danishvirani/)%7C |[GitHub](https://github.com/danishvirani)%7C
-- Dwayne |[LinkedIn](https://www.linkedin.com/in/miller-0)%7C |[GitHub](https://github.com/Dwayne92)%7C
+- Tommy Chung |[LinkedIn](https://www.linkedin.com/in/tommy-chung93)| |[GitHub](https://github.com/tommyc93)|
+- Danish |[LinkedIn](https://www.linkedin.com/in/danishvirani/)| |[GitHub](https://github.com/danishvirani)|
+- Dwayne |[LinkedIn](https://www.linkedin.com/in/miller-0)| |[GitHub](https://github.com/Dwayne92)|
 
 ### Approach
 #### Picking a Project Idea
