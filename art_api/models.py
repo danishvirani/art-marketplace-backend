@@ -19,7 +19,7 @@ class Art(models.Model):
 class User(models.Model):
     username = models.CharField(max_length=75, unique=True)
     password = models.CharField(max_length=1000)
-    use = models.CharField(max_length=32, null=True, blank=True)
+    use = models.CharField(max_length=32, blank=True)
     cart = ArrayField(models.IntegerField()
                    , size=10, null=True, blank=True)
     # cart = ArrayField(
