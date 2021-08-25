@@ -3,7 +3,7 @@
 
 ## Authors
 - Tommy Chung |[LinkedIn](https://www.linkedin.com/in/tommy-chung93)| |[GitHub](https://github.com/tommyc93)|
-- Danish |[LinkedIn](https://www.linkedin.com/in/danishvirani/)| |[GitHub](https://github.com/danishvirani)|
+- Danish Virani |[LinkedIn](https://www.linkedin.com/in/danishvirani/)| |[GitHub](https://github.com/danishvirani)|
 - Dwayne |[LinkedIn](https://www.linkedin.com/in/miller-0)| |[GitHub](https://github.com/Dwayne92)|
 
 ### Approach
