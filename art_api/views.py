@@ -51,7 +51,7 @@ def check_login(request):
         if User.objects.get(username=username):
             user = User.objects.get(username=username)
             if check_password(password, user.password):
-                return JsonResponse({'id': user.id, 'username': user.username})
+                return JsonResponse({'id': user.id, 'username': user.username, 'use': user.use, 'cart': user.cart})
             else:
                 return JsonResponse({})
         else:
